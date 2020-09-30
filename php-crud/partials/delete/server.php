@@ -2,13 +2,16 @@
 include __DIR__ .'/../database.php';
 
 
+
+
+$sql = "DELETE FROM stanze WHERE id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i",$id);
 $id = $_POST['id'];
+$stmt-> execute();
 
-$sql = "DELETE FROM stanze WHERE id = $id";
-$result = $conn->query($sql);
-
-if ($result) {
-    echo "ok";
+if ($stmt && $stmt->affected_rows >0) {
+    header("location: $basepath/index.php?roomId=$id");
 } else {
     echo "non cancellato";
 }

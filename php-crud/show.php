@@ -16,7 +16,7 @@ include __DIR__.'/partials/show/server.php';
 
  <body>
      <div class="container">
-         <a href="index.php">Torna Indietro</a>
+         <h1>Dettagli della stanza</h1>
 
          <ul class="list-group">
              <li class="list-group-item">ID <?php echo $row['id'] ?> </li>
