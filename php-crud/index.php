@@ -14,6 +14,14 @@ include __DIR__.'/partials/home/server.php';
             </div>
         <?php } ?>
 
+        <?php if (!empty($_GET['roomN'])) {
+            $stanza_non_cancellata = $_GET['roomN'] ?>
+            <div class="alert alert-warning">
+                <?php echo 'Non hai cancellato la stanza'.$stanza_non_cancellata ?>
+            </div>
+        <?php } ?>
+
+
         <table class="table">
             <thead>
                 <th>ID</th>

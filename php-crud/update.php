@@ -27,15 +27,17 @@ include __DIR__ .'/partials/update/server.php';
         </div>
 
         <div class="form-group">
-            <input type="submit" class="form-control bg-warning" value="Modifica" id="Modifica">
-
-        </div>
-
-        <div class="form-group">
 
             <input type="hidden" class="form-control" name="id" value="<?php echo $row['id']; ?>">
 
         </div>
+
+        <div class="form-group">
+            <input type="submit" class="form-control bg-warning" value="Modifica" id="Modifica">
+
+        </div>
+
+
 
 
     </form>
